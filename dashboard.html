@@ -291,17 +291,25 @@
                         </div>
                     </div>
                 </div>
-                <footer class="mt-4">
+                <footer class="mt-4 pt-4">
                     <div class="text-left"> <small class="text-secondary">&copy; 2020 DEWAN ENERGI NASIONAL. ALL RIGHTS RESERVED.</small>
 
                     </div>
                 </footer>
             </div>
         </div>
-        <script>
-            feather.replace()
+        <script type="text/javascript" src="js/all.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                 $('input.files').filer({
+                   addMore: true,
+                   showThumbs: true,
+                   extensions: ["jpg", "png", "gif", "pdf", "doc"]
+                 });
+              });
+              // Feather Icons
+              feather.replace()
         </script>
-        <script src="js/all.js"></script>
     </body>
 
 </html>

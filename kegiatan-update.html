@@ -123,42 +123,308 @@
 
                     </div>
                 </div>
-                <form class="row" action="./kegiatan-update-notif.html">
-                    <div class="col-lg-12">
+                <form class="row" action="./kegiatan-update-notif.html" enctype="multipart/form-data">
+                    <!-- Identifikasi dan Analisis Program -->
+                    <div class="col-12">
                         <hr class="my-4">
                          <h5 class="mb-3">Identifikasi dan Analisis Program</h5>
 
                     </div>
-                    <div class="col-lg-4">
-                        <label for="namaKegiatan">RPJP/RPJM*</label>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="form-group">
-                            <div class="form-group">
-                                <div class="form-group mt-4">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <label for="namaKegiatan">RPJP/RPJM*</label>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="form-group">
                                     <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
                                     aria-describedby="namaKegiatan" placeholder="Input kegiatan"></textarea>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <!-- file input -->
+                                    <input type="file" name="files[]" class="files" multiple="multiple">
+                                </div>
+                                <p> <a class="txt-accordion collapsed" data-toggle="collapse" href="#history1"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                <small>Lihat history</small>
+              </a>
+
+                                </p>
+                                <div class="collapse" id="history1">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Kode</th>
+                                                    <th>History</th>
+                                                    <th>Tanggal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Kode</td>
+                                                    <td>History description</td>
+                                                    <td>Tanggal</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 offset-lg-4"> <a href="./kegiatan.html" class="btn btn-light"><i class="feather-16" data-feather="arrow-left"></i> Kembali</a>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <label for="namaKegiatan">RENSTRA *</label>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="form-group">
+                                    <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
+                                    aria-describedby="namaKegiatan" placeholder="Input kegiatan"></textarea>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <!-- file input -->
+                                    <input type="file" name="files[]" class="files" multiple="multiple">
+                                </div>
+                                <p> <a class="txt-accordion collapsed" data-toggle="collapse" href="#history2"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                <small>Lihat history</small>
+              </a>
+
+                                </p>
+                                <div class="collapse" id="history2">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Kode</th>
+                                                    <th>History</th>
+                                                    <th>Tanggal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Kode</td>
+                                                    <td>History description</td>
+                                                    <td>Tanggal</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Program Kegiatan RUEN Dalam Rencana Kerja K/L -->
+                    <div class="col-12">
+                        <hr class="my-4">
+                         <h5 class="mb-3">Program Kegiatan RUEN Dalam Rencana Kerja K/L</h5>
+
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <label for="namaKegiatan">RKP / Rencana BU *</label>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="form-group">
+                                    <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
+                                    aria-describedby="namaKegiatan" placeholder="Input kegiatan"></textarea>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <!-- file input -->
+                                    <input type="file" name="files[]" class="files" multiple="multiple">
+                                </div>
+                                <p> <a class="txt-accordion collapsed" data-toggle="collapse" href="#history1"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                <small>Lihat history</small>
+              </a>
+
+                                </p>
+                                <div class="collapse" id="history1">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Kode</th>
+                                                    <th>History</th>
+                                                    <th>Tanggal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Kode</td>
+                                                    <td>History description</td>
+                                                    <td>Tanggal</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <label for="namaKegiatan">RKAKL / RKAP BU *</label>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="form-group">
+                                    <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
+                                    aria-describedby="namaKegiatan" placeholder="Input kegiatan"></textarea>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <!-- file input -->
+                                    <input type="file" name="files[]" class="files" multiple="multiple">
+                                </div>
+                                <p> <a class="txt-accordion collapsed" data-toggle="collapse" href="#history2"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                <small>Lihat history</small>
+              </a>
+
+                                </p>
+                                <div class="collapse" id="history2">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Kode</th>
+                                                    <th>History</th>
+                                                    <th>Tanggal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Kode</td>
+                                                    <td>History description</td>
+                                                    <td>Tanggal</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pelaksanaan Capaian Program/Kegiatan RUEN pada K/L -->
+                    <div class="col-12">
+                        <hr class="my-4">
+                         <h5 class="mb-3">Pelaksanaan Capaian Program/Kegiatan RUEN pada K/L</h5>
+
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <label for="namaKegiatan">Proses Pelaksanaan Program / Kegiatan *</label>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="form-group">
+                                    <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
+                                    aria-describedby="namaKegiatan" placeholder="Input kegiatan"></textarea>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <!-- file input -->
+                                    <input type="file" name="files[]" class="files" multiple="multiple">
+                                </div>
+                                <p> <a class="txt-accordion collapsed" data-toggle="collapse" href="#history1"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                <small>Lihat history</small>
+              </a>
+
+                                </p>
+                                <div class="collapse" id="history1">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Kode</th>
+                                                    <th>History</th>
+                                                    <th>Tanggal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Kode</td>
+                                                    <td>History description</td>
+                                                    <td>Tanggal</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <label for="namaKegiatan">Kemajuan Pelaksanaan Program / Kegiatan *</label>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="form-group">
+                                    <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
+                                    aria-describedby="namaKegiatan" placeholder="Input kegiatan"></textarea>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <!-- file input -->
+                                    <input type="file" name="files[]" class="files" multiple="multiple">
+                                </div>
+                                <p> <a class="txt-accordion collapsed" data-toggle="collapse" href="#history2"
+                                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                <small>Lihat history</small>
+              </a>
+
+                                </p>
+                                <div class="collapse" id="history2">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Kode</th>
+                                                    <th>History</th>
+                                                    <th>Tanggal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Kode</td>
+                                                    <td>History description</td>
+                                                    <td>Tanggal</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 offset-lg-3 mt-4"> <a href="./kegiatan.html" class="btn btn-light"><i class="feather-16" data-feather="arrow-left"></i> Kembali</a>
 
                         <button
                         type="submit" name="button" class="btn btn-primary mx-2">Simpan</button>
                     </div>
                 </form>
-                <footer class="mt-4">
+                <footer class="mt-4 pt-4">
                     <div class="text-left"> <small class="text-secondary">&copy; 2020 DEWAN ENERGI NASIONAL. ALL RIGHTS RESERVED.</small>
 
                     </div>
                 </footer>
             </div>
         </div>
-        <script>
-            feather.replace()
+        <script type="text/javascript" src="js/all.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                 $('input.files').filer({
+                   addMore: true,
+                   showThumbs: true,
+                   extensions: ["jpg", "png", "gif", "pdf", "doc"]
+                 });
+              });
+              // Feather Icons
+              feather.replace()
         </script>
-        <script src="js/all.js"></script>
     </body>
 
 </html>
