@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="37px" viewBox="0 0 36 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>youtube-play</title>
+    <g id="login" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.502278646">
+        <g id="den/login-desktop-alt2" transform="translate(-1043.000000, -803.000000)">
+            <g id="form" transform="translate(767.000000, 16.000000)">
+                <g id="socials" transform="translate(120.000000, 787.000000)">
+                    <g id="youtube-play" transform="translate(156.000000, 0.000000)">
+                        <rect id="Rectangle" x="0" y="0" width="36" height="36"></rect>
+                        <circle id="Oval" stroke="#000000" stroke-width="1.63636364" cx="18" cy="18.4171193" r="17.1818182"></circle>
+                        <path d="M26.1818182,20.9161472 L26.1818182,15.0838528 C26.1818182,15.0838528 26.1818182,12.2727273 23.3618618,12.2727273 L12.6371761,12.2727273 C12.6371761,12.2727273 9.81818182,12.2727273 9.81818182,15.0838528 L9.81818182,20.9161472 C9.81818182,20.9161472 9.81818182,23.7272727 12.6371761,23.7272727 L23.3618618,23.7272727 C23.3618618,23.7272727 26.1818182,23.7272727 26.1818182,20.9161472 M21.1769007,18.0081524 L15.8198495,21.1444132 L15.8198495,14.8709324 L21.1769007,18.0081524" id="Shape" fill="#000000"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

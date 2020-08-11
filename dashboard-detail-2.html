@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="img/favicon.png" />
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <title>DEN</title>
+    </head>
+    
+    <body>
+        <div class="overlay-nav" id="menu-overlay" onclick="closeNav()"></div>
+        <div class="overlay-panel" id="filter-overlay" onclick="closePanel()"></div>
+        <div class="dashboard-wrapper d-flex flex-wrap align-items-stretch">
+            <div class="den-sb" id="sidebar"> <span class="den-logo"></span>
+ <a href="#" class="close-sb" onclick="closeNav()">
+    <i data-feather="x-circle"></i>
+  </a>
+
+                <ul class="den-sb-nav">
+                    <li class="active"> <a href="./dashboard.html">
+        <span class="nav-icon"><i data-feather="home"></i></span>
+        <span class="nav-title">Dashboard</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./kegiatan.html">
+        <span class="nav-icon"><i data-feather="clipboard"></i></span>
+        <span class="nav-title">Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./hasil-kegiatan.html">
+        <span class="nav-icon"><i data-feather="bar-chart"></i></span>
+        <span class="nav-title">Hasil Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./verifikasi.html">
+        <span class="nav-icon"><i data-feather="check-circle"></i></span>
+        <span class="nav-title">Verifikasi</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./riwayat.html">
+        <span class="nav-icon"><i data-feather="clock"></i></span>
+        <span class="nav-title">Riwayat</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./administrator.html">
+        <span class="nav-icon"><i data-feather="lock"></i></span>
+        <span class="nav-title">Administrator</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./pengaturan.html">
+        <span class="nav-icon"><i data-feather="settings"></i></span>
+        <span class="nav-title">Pengaturan</span>
+      </a>
+
+                    </li>
+                    <li class="mt-4"> <a href="./tentang-kami.html">
+        <span class="nav-title p-0">Tentang Kami</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./hub-kami.html">
+        <span class="nav-title p-0">Hubungi</span>
+      </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="p-3 p-lg-4 den-content">
+                <div class="dashboard-header d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex align-items-center">
+                        <button type="button" name="button" class="btn btn-link text-dark" onclick="openNav()"
+                        id="open-nav"> <i data-feather="menu"></i>
+
+                        </button>
+                         <h3 class="d-inline-block m-0">Dashboard</h3>
+
+                    </div>
+                    <div class="user-name float-right">
+                        <div class="user-name-avatar rounded-circle shadow-sm"></div>
+                        <div class="user-name-label mr-3"> <small>Login sebagai</small>
+
+                            <br/>Nama Kementerian</div>
+                        <button type="button" class="btn btn-link" onclick="window.location.href='./index.html';"><i data-feather="log-out"></i>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between">
+                     <h5 class="section-title mb-4">Riwayat Detail Penilaian</h5>
+
+                    <div> <a href="./dashboard-detail-1.html" class="btn btn-link btn-sm mr-1"><i data-feather="arrow-left-circle"></i> Kembali</a>
+
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 col-lg-5 detail-riwayat">
+                         <h6 class="label-riwayat d-flex align-items-center"><i data-feather="box" class="feather-16 mr-1"></i> Program</h6>
+
+                         <h5>Peningkatan produksi dan pemanfaatan BBN</h5>
+
+                    </div>
+                    <div class="col-12 col-lg-5 detail-riwayat">
+                         <h6 class="label-riwayat d-flex align-items-center"><i data-feather="clipboard" class="feather-16 mr-1"></i> Kegiatan</h6>
+
+                         <h5>Menyusun peta jalan penyiapan jenis tanaman prioritas untuk bahan baku BBN  </h5>
+
+                    </div>
+                    <div class="col-12 col-lg-2 detail-riwayat">
+                         <h6 class="label-riwayat d-flex align-items-center"><i data-feather="calendar" class="feather-16 mr-1"></i> Periode</h6>
+
+                         <h5>2016 - 2019</h5>
+
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table class="table table-borderless table-striped table-dashboard">
+                                <thead>
+                                    <tr class="bg-light">
+                                        <th scope="col">No.</th>
+                                        <th scope="col">Kementerian/Lembaga</th>
+                                        <th scope="col">Kode</th>
+                                        <th scope="col" width="120">Data Input</th>
+                                        <th scope="col">Capaian</th>
+                                        <th scope="col" class="text-center">Nilai</th>
+                                        <th scope="col" width="160">Tanggal input</th>
+                                        <th scope="col" width="100">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kementerian Lingkungan Hidup dan Kehutanan</td>
+                                        <td>1549243264</td>
+                                        <td>RPJP / RPJM</td>
+                                        <td>Buku RPJMN II Arah Kebijakan dan Strategi Pembangunan Bidang 10.3.7. Penguatan
+                                            Pasokan, Bauran dan Efisiensi Konsumsi Energi Peningkatan pemanfaatan Bahan
+                                            Bakar Nabati (BBN) difokuskan kepada 3 (tiga) jenis bahan bakar nabati,
+                                            yaitu bio-ethanol, biodiesel, serta bio-gas.</td>
+                                        <td class="text-center">6</td>
+                                        <td>04 February 2019 08:21:04</td>
+                                        <td> <span class="status-badge">Status</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kementerian Lingkungan Hidup dan Kehutanan</td>
+                                        <td>1549243264</td>
+                                        <td>RPJP / RPJM</td>
+                                        <td>Buku RPJMN II Arah Kebijakan dan Strategi Pembangunan Bidang 10.3.7. Penguatan
+                                            Pasokan, Bauran dan Efisiensi Konsumsi Energi Peningkatan pemanfaatan Bahan
+                                            Bakar Nabati (BBN) difokuskan kepada 3 (tiga) jenis bahan bakar nabati,
+                                            yaitu bio-ethanol, biodiesel, serta bio-gas.</td>
+                                        <td class="text-center">6</td>
+                                        <td>04 February 2019 08:21:04</td>
+                                        <td> <span class="status-badge status-badge--success">Success</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kementerian Lingkungan Hidup dan Kehutanan</td>
+                                        <td>1549243264</td>
+                                        <td>RPJP / RPJM</td>
+                                        <td>Buku RPJMN II Arah Kebijakan dan Strategi Pembangunan Bidang 10.3.7. Penguatan
+                                            Pasokan, Bauran dan Efisiensi Konsumsi Energi Peningkatan pemanfaatan Bahan
+                                            Bakar Nabati (BBN) difokuskan kepada 3 (tiga) jenis bahan bakar nabati,
+                                            yaitu bio-ethanol, biodiesel, serta bio-gas.</td>
+                                        <td class="text-center">6</td>
+                                        <td>04 February 2019 08:21:04</td>
+                                        <td> <span class="status-badge status-badge--pending">Pending</span>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kementerian Lingkungan Hidup dan Kehutanan</td>
+                                        <td>1549243264</td>
+                                        <td>RPJP / RPJM</td>
+                                        <td>Buku RPJMN II Arah Kebijakan dan Strategi Pembangunan Bidang 10.3.7. Penguatan
+                                            Pasokan, Bauran dan Efisiensi Konsumsi Energi Peningkatan pemanfaatan Bahan
+                                            Bakar Nabati (BBN) difokuskan kepada 3 (tiga) jenis bahan bakar nabati,
+                                            yaitu bio-ethanol, biodiesel, serta bio-gas.</td>
+                                        <td class="text-center">6</td>
+                                        <td>04 February 2019 08:21:04</td>
+                                        <td> <span class="status-badge status-badge--progress">Progress</span>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <footer class="mt-4">
+                    <div class="text-left"> <small class="text-secondary">&copy; 2020 DEWAN ENERGI NASIONAL. ALL RIGHTS RESERVED.</small>
+
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script>
+            feather.replace()
+        </script>
+        <script src="js/all.js"></script>
+    </body>
+
+</html>

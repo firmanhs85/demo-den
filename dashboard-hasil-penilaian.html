@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="./img/favicon.png" />
+        <script src="//cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <title>DEN</title>
+    </head>
+    
+    <body>
+        <div class="overlay-nav" id="menu-overlay" onclick="closeNav()"></div>
+        <div class="d-flex flex-wrap">
+            <div class="den-sb" id="sidebar"> <span class="den-logo"></span>
+ <a href="#" class="close-sb" onclick="closeNav()">
+    <i data-feather="x-circle"></i>
+  </a>
+
+                <ul class="den-sb-nav">
+                    <li class="active"> <a href="./dashboard.html">
+        <span class="nav-icon"><i data-feather="home"></i></span>
+        <span class="nav-title">Dashboard</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./kegiatan.html">
+        <span class="nav-icon"><i data-feather="clipboard"></i></span>
+        <span class="nav-title">Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./hasil-kegiatan.html">
+        <span class="nav-icon"><i data-feather="bar-chart"></i></span>
+        <span class="nav-title">Hasil Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./verifikasi.html">
+        <span class="nav-icon"><i data-feather="check-circle"></i></span>
+        <span class="nav-title">Verifikasi</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./riwayat.html">
+        <span class="nav-icon"><i data-feather="clock"></i></span>
+        <span class="nav-title">Riwayat</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./administrator.html">
+        <span class="nav-icon"><i data-feather="lock"></i></span>
+        <span class="nav-title">Administrator</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./pengaturan.html">
+        <span class="nav-icon"><i data-feather="settings"></i></span>
+        <span class="nav-title">Pengaturan</span>
+      </a>
+
+                    </li>
+                    <li class="mt-4"> <a href="./tentang-kami.html">
+        <span class="nav-title p-0">Tentang Kami</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./hub-kami.html">
+        <span class="nav-title p-0">Hubungi</span>
+      </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="p-3 p-lg-4 den-content">
+                <div class="dashboard-header d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex align-items-center">
+                        <button type="button" name="button" class="btn btn-link text-dark" onclick="openNav()"
+                        id="open-nav"> <i data-feather="menu"></i>
+
+                        </button>
+                         <h3 class="d-inline-block m-0">Dashboard</h3>
+
+                    </div>
+                    <div class="user-name float-right">
+                        <div class="user-name-avatar rounded-circle"></div>
+                        <div class="user-name-label mr-3"> <small>Login sebagai</small>
+
+                            <br/>Nama Kementerian</div>
+                        <button type="button" class="btn btn-link"><i data-feather="log-out" onclick="window.location.href='./index.html';"></i>
+
+                        </button>
+                    </div>
+                </div>
+                 <h5 class="section-title mb-4">Papan Kinerja</h5>
+
+                <div class="row row-cols-2 row-cols-md-2 row-cols-lg-5">
+                    <div class="col w-sm-100 mt-3">
+                        <div class="shadow-sm rounded-lg card border-0 card-total">
+                            <div class="card-body px-3 py-3">
+                                 <h3 class="card-title">38</h3>
+
+                                <div class="bobot bobot-red">Bobot nilai <strong>0-10</strong>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col w-sm-100 mt-3">
+                        <div class="shadow-sm rounded-lg card border-0 card-total">
+                            <div class="card-body px-3 py-3">
+                                 <h3 class="card-title">57</h3>
+
+                                <div class="bobot bobot-orange">Bobot nilai <strong>11-30</strong>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col w-sm-100 mt-3">
+                        <div class="shadow-sm rounded-lg card border-0 card-total">
+                            <div class="card-body px-3 py-3">
+                                 <h3 class="card-title">56</h3>
+
+                                <div class="bobot bobot-yellow">Bobot nilai <strong>31-50</strong>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col w-sm-100 mt-3">
+                        <div class="shadow-sm rounded-lg card border-0 card-total">
+                            <div class="card-body px-3 py-3">
+                                 <h3 class="card-title">176</h3>
+
+                                <div class="bobot bobot-lime">Bobot nilai <strong>51-85</strong>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col w-sm-100 mt-3">
+                        <div class="shadow-sm rounded-lg card border-0 card-total">
+                            <div class="card-body px-3 py-3">
+                                 <h3 class="card-title">25</h3>
+
+                                <div class="bobot bobot-green">Bobot nilai <strong>86-100</strong>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table class="table table-borderless table-striped table-dashboard">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col" colspan="5" class="text-center bg-light rounded-left">Kinerja Pelaksanaan</th>
+                                        <th scope="col" class="text-right bg-light rounded-right">Jumlah</th>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td></td>
+                                        <td class="text-center"><span class="grade-icon grade-icon--red"></span>
+                                        </td>
+                                        <td class="text-center"><span class="grade-icon grade-icon--orange"></span>
+                                        </td>
+                                        <td class="text-center"><span class="grade-icon grade-icon--yellow"></span>
+                                        </td>
+                                        <td class="text-center"><span class="grade-icon grade-icon--lime"></span>
+                                        </td>
+                                        <td class="text-center"><span class="grade-icon grade-icon--green"></span>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Kementerian Perhubungan</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-right"><a href="#"><strong>0</strong></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kementerian Lingkungan Hidup dan Kehutanan</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-right"><a href="#"><strong>0</strong></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kementerian Energi dan Sumber Daya Mineral</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-right"><a href="#"><strong>0</strong></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kementerian Perindustrian</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-right"><a href="#"><strong>0</strong></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kementerian Keuangan</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-right"><a href="#"><strong>0</strong></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kementerian Perencanaan Pembangunan</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-right"><a href="#"><strong>0</strong></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kementerian Riset, Teknologi, dan Pendidikan Tinggi</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-right"><a href="#"><strong>0</strong></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kementerian BUMN</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-right"><a href="#"><strong>0</strong></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kementerian Pekerjaan Umum dan Perumahan Rakyat</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-right"><a href="#"><strong>0</strong></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kementerian Agraria dan Tata Ruang</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-right"><a href="#"><strong>0</strong></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kementerian Dalam Negeri</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-center">0</td>
+                                        <td class="text-right"><a href="#"><strong>0</strong></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <footer class="mt-4">
+                    <div class="text-left"> <small class="text-secondary">&copy; 2020 DEWAN ENERGI NASIONAL. ALL RIGHTS RESERVED.</small>
+
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script>
+            feather.replace()
+        </script>
+        <script src="js/all.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="img/favicon.png" />
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <title>DEN</title>
+    </head>
+    
+    <body>
+        <div class="overlay-nav" id="menu-overlay" onclick="closeNav()"></div>
+        <div class="overlay-panel" id="filter-overlay" onclick="closePanel()"></div>
+        <div class="dashboard-wrapper d-flex flex-wrap align-items-stretch">
+            <div class="den-sb" id="sidebar"> <span class="den-logo"></span>
+ <a href="#" class="close-sb" onclick="closeNav()">
+    <i data-feather="x-circle"></i>
+  </a>
+
+                <ul class="den-sb-nav">
+                    <li> <a href="./dashboard.html">
+        <span class="nav-icon"><i data-feather="home"></i></span>
+        <span class="nav-title">Dashboard</span>
+      </a>
+
+                    </li>
+                    <li class="active"> <a href="./kegiatan.html">
+        <span class="nav-icon"><i data-feather="clipboard"></i></span>
+        <span class="nav-title">Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./hasil-kegiatan.html">
+        <span class="nav-icon"><i data-feather="bar-chart"></i></span>
+        <span class="nav-title">Hasil Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./verifikasi.html">
+        <span class="nav-icon"><i data-feather="check-circle"></i></span>
+        <span class="nav-title">Verifikasi</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./riwayat.html">
+        <span class="nav-icon"><i data-feather="clock"></i></span>
+        <span class="nav-title">Riwayat</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./administrator.html">
+        <span class="nav-icon"><i data-feather="lock"></i></span>
+        <span class="nav-title">Administrator</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./pengaturan.html">
+        <span class="nav-icon"><i data-feather="settings"></i></span>
+        <span class="nav-title">Pengaturan</span>
+      </a>
+
+                    </li>
+                    <li class="mt-4"> <a href="./tentang-kami.html">
+        <span class="nav-title p-0">Tentang Kami</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./hub-kami.html">
+        <span class="nav-title p-0">Hubungi</span>
+      </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="p-3 p-lg-4 den-content">
+                <div class="dashboard-header d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex align-items-center">
+                        <button type="button" name="button" class="btn btn-link text-dark" onclick="openNav()"
+                        id="open-nav"> <i data-feather="menu"></i>
+
+                        </button>
+                         <h3 class="d-inline-block m-0">Kegiatan</h3>
+
+                    </div>
+                    <div class="user-name float-right">
+                        <div class="user-name-avatar rounded-circle shadow-sm"></div>
+                        <div class="user-name-label mr-3"> <small>Login sebagai</small>
+
+                            <br/>Nama Kementerian</div>
+                        <button type="button" class="btn btn-link" onclick="window.location.href='./index.html';"><i data-feather="log-out"></i>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between">
+                     <h5 class="section-title mb-4">Daftar Program dan Kegiatan</h5>
+
+                    <div> <a href="#" class="btn btn-primary mr-1" onclick="openFilter()"><i data-feather="search" class="feather-16"></i></a>
+
+                        <a
+                        href="#" class="btn btn-primary"><i data-feather="plus" class="feather-16"></i> Buat Baru</a>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table class="table table-borderless table-striped table-dashboard">
+                                <thead>
+                                    <tr class="bg-light">
+                                        <th scope="col">No.</th>
+                                        <th scope="col">Kementerian/Lembaga</th>
+                                        <th scope="col">Bidang</th>
+                                        <th scope="col">Program</th>
+                                        <th scope="col">Kegiatan</th>
+                                        <th scope="col" width="120">Periode</th>
+                                        <th scope="col" width="180"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Kementerian Lingkungan Hidup dan Kehutanan</td>
+                                        <td>EBT</td>
+                                        <td>Peningkatan produksi dan pemanfaatan BBN</td>
+                                        <td>Menyusun peta jalan penyiapan jenis tanaman prioritas untuk bahan baku
+                                            BBN</td>
+                                        <td>2016-2019</td>
+                                        <td class="text-right"> <a href="./kegiatan-update.html" class="btn btn-sm btn-outline-primary"><i class="feather-12" data-feather="edit"></i> Update progress</a>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <footer class="mt-4">
+                    <div class="text-left"> <small class="text-secondary">&copy; 2020 DEWAN ENERGI NASIONAL. ALL RIGHTS RESERVED.</small>
+
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- Filter panel -->
+        <div class="panel-filter p-4 pt-5" id="filterPanel">
+            <form class="" action="./kegiatan-search.html"> <a href="#" class="close-panel" onclick="closePanel()">
+      <i data-feather="x-circle"></i>
+    </a>
+
+                 <h5 class="mt-2">Pencarian program atau kegiatan</h5>
+
+                <div class="form-group">
+                    <div class="form-group mt-4">
+                        <label for="namaKegiatan"><strong>Nama Kegiatan atau program</strong>
+                        </label>
+                        <input type="text" class="form-control" id="namaKegiatan" aria-describedby="namaKegiatan"
+                        placeholder="Cari nama kegiatan">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group mt-4">
+                        <label for="periode"><strong>Kementerian/Departemen</strong>
+                        </label>
+                        <select class="custom-select">
+                            <option selected>Pilih kementerian</option>
+                            <option value="Nama Kementerian">Nama Kementerian/Departemen</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><strong>Data Bidang</strong>
+                    </label>
+                    <label class="custom-checkbox">EBT
+                        <input type="checkbox"> <span class="checkmark"></span>
+
+                    </label>
+                    <label class="custom-checkbox">Ketenaga Listrikan
+                        <input type="checkbox"> <span class="checkmark"></span>
+
+                    </label>
+                    <label class="custom-checkbox">Fosil
+                        <input type="checkbox"> <span class="checkmark"></span>
+
+                    </label>
+                    <label class="custom-checkbox">Konservasi Energi dan Nilai Tambah
+                        <input type="checkbox"> <span class="checkmark"></span>
+
+                    </label>
+                    <label class="custom-checkbox">Lainnya
+                        <input type="checkbox"> <span class="checkmark"></span>
+
+                    </label>
+                </div>
+                <div class="form-group">
+                    <div class="form-group mt-4">
+                        <label for="periode"><strong>Periode</strong>
+                        </label>
+                        <select class="custom-select">
+                            <option selected>Pilih periode</option>
+                            <option value="2016-2020">2016-2020</option>
+                            <option value="2019-2020">2019-2020</option>
+                            <option value="2019-2050">2019-2050</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group mt-4">
+                        <label for="periode"><strong>Grade</strong>
+                        </label>
+                        <select class="custom-select">
+                            <option selected>Pilih Grade</option>
+                            <option value="0-10">0-10</option>
+                            <option value="11-30">11-30</option>
+                            <option value="31-50">31-50</option>
+                            <option value="51-85">51-85</option>
+                            <option value="86-100">86-100</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="panel-btn px-4 py-3">
+                    <button type="submit" class="btn btn-primary btn-block">Cari</button>
+                </div>
+            </form>
+        </div>
+        <script>
+            feather.replace()
+        </script>
+        <script src="js/all.js"></script>
+    </body>
+
+</html>
