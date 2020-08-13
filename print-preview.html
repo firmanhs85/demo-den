@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta name="theme-color" content="#00A697" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="img/favicon.png" />
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <title>DEN</title>
+    </head>
+    
+    <body>
+        <div class="overlay-nav" id="menu-overlay" onclick="closeNav()"></div>
+        <div class="overlay-panel" id="filter-overlay" onclick="closePanel()"></div>
+        <article class="container py-5">
+            <div class="row mb-4">
+                <div class="col-sm-12">
+                    <button type="button" name="button" class="btn btn-sm btn-outline-primary btn-print"
+                    onclick="printFunction()"> <i data-feather="printer" class="feather-16"></i> Cetak sekarang</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 mb-4">
+                     <h2>Hasil Penilaian</h2>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card table-responsive">
+                        <table class="table mb-0 table-striped table-dashboard">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="border-top-0">No.</th>
+                                    <th scope="col" class="border-top-0">Kementerian/Lembaga</th>
+                                    <th scope="col" class="border-top-0">Bidang</th>
+                                    <th scope="col" class="border-top-0">Program</th>
+                                    <th scope="col" class="border-top-0">Kegiatan</th>
+                                    <th scope="col" class="border-top-0" width="120">Periode</th>
+                                    <th scope="col" class="text-right border-top-0">Nilai</th>
+                                    <th scope="col" class="text-center border-top-0">Grade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Kementerian Lingkungan Hidup dan Kehutanan</td>
+                                    <td>EBT</td>
+                                    <td>Peningkatan produksi dan pemanfaatan BBN</td>
+                                    <td>Menyusun peta jalan penyiapan jenis tanaman prioritas untuk bahan baku
+                                        BBN</td>
+                                    <td>2016-2019</td>
+                                    <td class="text-right">6</td>
+                                    <td class="text-center"><span class="grade-icon grade-icon--orange"></span>
+                                        </</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Kementerian Lingkungan Hidup dan Kehutanan</td>
+                                    <td>EBT</td>
+                                    <td>Peningkatan produksi dan pemanfaatan BBN</td>
+                                    <td>Menyusun peta jalan penyiapan jenis tanaman prioritas untuk bahan baku
+                                        BBN</td>
+                                    <td>2016-2019</td>
+                                    <td class="text-right">6</td>
+                                    <td class="text-center"><span class="grade-icon grade-icon--red"></span>
+                                        </</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Kementerian Lingkungan Hidup dan Kehutanan</td>
+                                    <td>EBT</td>
+                                    <td>Peningkatan produksi dan pemanfaatan BBN</td>
+                                    <td>Menyusun peta jalan penyiapan jenis tanaman prioritas untuk bahan baku
+                                        BBN</td>
+                                    <td>2016-2019</td>
+                                    <td class="text-right">6</td>
+                                    <td class="text-center"><span class="grade-icon grade-icon--green"></span>
+                                        </</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <script type="text/javascript">
+            function printFunction() {
+                window.print();
+              }
+        </script>
+        <script type="text/javascript" src="js/all.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                 $('input.files').filer({
+                   addMore: true,
+                   showThumbs: true,
+                   extensions: ["jpg", "png", "gif", "pdf", "doc"]
+                 });
+              });
+              // Feather Icons
+              feather.replace();
+        </script>
+    </body>
+
+</html>

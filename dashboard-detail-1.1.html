@@ -103,7 +103,7 @@
                     <div> <a href="./dashboard.html" class="btn btn-link btn-sm mr-1"><i data-feather="arrow-left-circle"></i> Kembali</a>
 
                         <a
-                        href="#" class="btn btn-primary mr-1"><i data-feather="printer" class="feather-16"></i>
+                        href="#" class="btn btn-primary mr-1" onclick="printPreview()"><i data-feather="printer" class="feather-16"></i>
                             </a> <a href="#" class="btn btn-primary" onclick="openFilter()"><i data-feather="search" class="feather-16"></i></a>
 
                     </div>
@@ -245,6 +245,11 @@
                 </div>
             </form>
         </div>
+        <script type="text/javascript">
+            function printPreview() {
+                var myWindow = window.open("print-preview-2.html", "", "width=1200,height=800");
+              }
+        </script>
         <script type="text/javascript" src="js/all.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
