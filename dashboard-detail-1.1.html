@@ -258,6 +258,13 @@
                    showThumbs: true,
                    extensions: ["jpg", "png", "gif", "pdf", "doc"]
                  });
+                 $('#myWizard').TabWizard({
+                   nextButtonClass: '.btnNext',
+                   previousButtonClass: '.btnPrev',
+                   onFinish: function () {
+                     alert('Anda yakin mau simpan update kegitan ini?');
+                   }
+                 });
               });
               // Feather Icons
               feather.replace();

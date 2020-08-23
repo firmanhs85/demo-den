@@ -100,7 +100,7 @@
                 <div class="d-flex flex-wrap justify-content-between">
                      <h5 class="section-title mb-4">Update Progres Kegiatan</h5>
 
-                    <div> <a href="./kegiatan.html" class="btn btn-link btn-sm mr-1"><i data-feather="arrow-left-circle"></i> Kembali</a>
+                    <div> <a href="./kegiatan.html" class="btn btn-link btn-sm"><i data-feather="arrow-left-circle"></i> Kembali</a>
 
                     </div>
                 </div>
@@ -421,6 +421,13 @@
                    addMore: true,
                    showThumbs: true,
                    extensions: ["jpg", "png", "gif", "pdf", "doc"]
+                 });
+                 $('#myWizard').TabWizard({
+                   nextButtonClass: '.btnNext',
+                   previousButtonClass: '.btnPrev',
+                   onFinish: function () {
+                     alert('Anda yakin mau simpan update kegitan ini?');
+                   }
                  });
               });
               // Feather Icons

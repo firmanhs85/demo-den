@@ -100,7 +100,7 @@
                  <h5 class="section-title mb-4">Papan Kinerja</h5>
 
                 <div class="row row-cols-2 row-cols-md-2 row-cols-lg-5">
-                    <div class="col w-sm-100 mt-3"> <a href="./dashboard-detail-1.html" class="shadow-sm rounded-lg card border-0 card-total">
+                    <div class="col w-sm-100 mt-3"> <a href="./dashboard-detail-1.html" class="shadow-sm rounded-lg card card-total">
           <div class="card-body px-3 py-3">
             <h3 class="card-title">38</h3>
             <div class="bobot bobot-red">
@@ -110,7 +110,7 @@
         </a>
 
                     </div>
-                    <div class="col w-sm-100 mt-3"> <a href="./dashboard-detail-1.html" class="shadow-sm rounded-lg card border-0 card-total">
+                    <div class="col w-sm-100 mt-3"> <a href="./dashboard-detail-1.html" class="shadow-sm rounded-lg card card-total">
           <div class="card-body px-3 py-3">
             <h3 class="card-title">57</h3>
             <div class="bobot bobot-orange">
@@ -120,7 +120,7 @@
         </a>
 
                     </div>
-                    <div class="col w-sm-100 mt-3"> <a href="./dashboard-detail-1.html" class="shadow-sm rounded-lg card border-0 card-total">
+                    <div class="col w-sm-100 mt-3"> <a href="./dashboard-detail-1.html" class="shadow-sm rounded-lg card card-total">
           <div class="card-body px-3 py-3">
             <h3 class="card-title">56</h3>
             <div class="bobot bobot-yellow">
@@ -130,7 +130,7 @@
         </a>
 
                     </div>
-                    <div class="col w-sm-100 mt-3"> <a href="./dashboard-detail-1.html" class="shadow-sm rounded-lg card border-0 card-total">
+                    <div class="col w-sm-100 mt-3"> <a href="./dashboard-detail-1.html" class="shadow-sm rounded-lg card card-total">
           <div class="card-body px-3 py-3">
             <h3 class="card-title">176</h3>
             <div class="bobot bobot-lime">
@@ -140,7 +140,7 @@
         </a>
 
                     </div>
-                    <div class="col w-sm-100 mt-3"> <a href="./dashboard-detail-1.html" class="shadow-sm rounded-lg card border-0 card-total">
+                    <div class="col w-sm-100 mt-3"> <a href="./dashboard-detail-1.html" class="shadow-sm rounded-lg card card-total">
           <div class="card-body px-3 py-3">
             <h3 class="card-title">25</h3>
             <div class="bobot bobot-green">
@@ -306,6 +306,13 @@
                    addMore: true,
                    showThumbs: true,
                    extensions: ["jpg", "png", "gif", "pdf", "doc"]
+                 });
+                 $('#myWizard').TabWizard({
+                   nextButtonClass: '.btnNext',
+                   previousButtonClass: '.btnPrev',
+                   onFinish: function () {
+                     alert('Anda yakin mau simpan update kegitan ini?');
+                   }
                  });
               });
               // Feather Icons
