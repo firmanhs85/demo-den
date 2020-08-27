@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta name="theme-color" content="#00A697" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="img/favicon.png" />
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <title>DEN</title>
+    </head>
+    
+    <body>
+        <div class="overlay-nav" id="menu-overlay" onclick="closeNav()"></div>
+        <div class="overlay-panel" id="filter-overlay" onclick="closePanel()"></div>
+        <div class="dashboard-wrapper d-flex flex-wrap align-items-stretch">
+            <div class="den-sb" id="sidebar"> <span class="den-logo"></span>
+ <a href="#" class="close-sb" onclick="closeNav()">
+    <i data-feather="x-circle"></i>
+  </a>
+
+                <ul class="den-sb-nav">
+                    <li> <a href="./dashboard.html">
+        <span class="nav-icon"><i data-feather="home"></i></span>
+        <span class="nav-title">Dashboard</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./kegiatan.html">
+        <span class="nav-icon"><i data-feather="clipboard"></i></span>
+        <span class="nav-title">Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./hasil-kegiatan.html">
+        <span class="nav-icon"><i data-feather="bar-chart"></i></span>
+        <span class="nav-title">Hasil Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li class="active"> <a href="./verifikasi.html">
+        <span class="nav-icon"><i data-feather="check-circle"></i></span>
+        <span class="nav-title">Verifikasi</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./riwayat.html">
+        <span class="nav-icon"><i data-feather="clock"></i></span>
+        <span class="nav-title">Riwayat</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./administrator.html">
+        <span class="nav-icon"><i data-feather="lock"></i></span>
+        <span class="nav-title">Administrator</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./pengaturan.html">
+        <span class="nav-icon"><i data-feather="settings"></i></span>
+        <span class="nav-title">Pengaturan</span>
+      </a>
+
+                    </li>
+                    <li class="mt-4"> <a href="./tentang-kami.html">
+        <span class="nav-title p-0">Tentang Kami</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./hub-kami.html">
+        <span class="nav-title p-0">Hubungi</span>
+      </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="p-3 p-lg-4 den-content">
+                <div class="dashboard-header d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex align-items-center">
+                        <button type="button" name="button" class="btn btn-link text-dark" onclick="openNav()"
+                        id="open-nav"> <i data-feather="menu"></i>
+
+                        </button>
+                         <h3 class="d-inline-block m-0">Verifikasi</h3>
+
+                    </div>
+                    <div class="user-name float-right">
+                        <div class="user-name-avatar rounded-circle shadow-sm"></div>
+                        <div class="user-name-label mr-3"> <small>Login sebagai</small>
+
+                            <br/>Nama Kementerian</div>
+                        <button type="button" class="btn btn-link" onclick="window.location.href='./index.html';"><i data-feather="log-out"></i>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between">
+                     <h5 class="section-title mb-4">Verifikasi Progres Kegiatan</h5>
+
+                    <div> <a href="./kegiatan.html" class="btn btn-link btn-sm"><i data-feather="arrow-left-circle"></i> Kembali</a>
+
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 col-lg-5 detail-riwayat">
+                         <h6 class="label-riwayat d-flex align-items-center"><i data-feather="box" class="feather-16 mr-1"></i> Program</h6>
+
+                         <h5>Peningkatan produksi dan pemanfaatan BBN</h5>
+
+                    </div>
+                    <div class="col-12 col-lg-5 detail-riwayat">
+                         <h6 class="label-riwayat d-flex align-items-center"><i data-feather="clipboard" class="feather-16 mr-1"></i> Kegiatan</h6>
+
+                         <h5>Menyusun peta jalan penyiapan jenis tanaman prioritas untuk bahan baku BBN  </h5>
+
+                    </div>
+                    <div class="col-12 col-lg-2 detail-riwayat">
+                         <h6 class="label-riwayat d-flex align-items-center"><i data-feather="calendar" class="feather-16 mr-1"></i> Periode</h6>
+
+                         <h5>2016 - 2019</h5>
+
+                    </div>
+                </div>
+                <div class="row" id="myWizard">
+                    <div class="col-12">
+                        <hr/>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <ul class="nav nav-tabs tab-wizard" id="myTab" role="tablist">
+                            <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#step-1" role="tab"
+                                aria-selected="false">
+              <small>Step 1</small>
+              <div><strong>Identifikasi dan Analisis Program</strong></div>
+            </a>
+
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#step-2" role="tab" aria-selected="false">
+              <small>Step 2</small>
+              <div><strong>Program Kegiatan RUEN Dalam Rencana Kerja K/L</strong></div>
+            </a>
+
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#step-3" role="tab" aria-selected="true">
+              <small>Step 3</small>
+              <div><strong>Pelaksanaan Capaian Program/Kegiatan RUEN pada K/L</strong></div>
+            </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9 col-12">
+                        <div class="tab-content" id="myTabContent">
+                            <!-- Identifikasi dan Analisis Program -->
+                            <div class="tab-pane fade show active" id="step-1" role="tabpanel">
+                                 <h5 class="mb-3">Identifikasi dan Analisis Program</h5>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="namaKegiatan" class="float-left">RPJP/RPJM*</label> <a class="float-right" data-toggle="modal" data-target="#inputHistory"
+                                        role="button">
+                  <small>Lihat history</small>
+                </a>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
+                                            aria-describedby="namaKegiatan" placeholder="Input kegiatan"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label class="custom-checkbox mb-0">Dapat dinilai
+                                            <input type="checkbox" checked> <span class="checkmark"></span>
+
+                                        </label>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Poin</label>
+                                        <select class="form-control">
+                                            <option value="-">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Status</label>
+                                        <select class="form-control">
+                                            <option value="-">Pilih status</option>
+                                            <option value="disetujui">Disetujui</option>
+                                            <option value="klarifikasi">Dibutuhkan klarifikasi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <label for="namaKegiatan" class="float-left">RENSTRA *</label> <a class="float-right" data-toggle="modal" data-target="#inputHistory"
+                                        role="button">
+                  <small>Lihat history</small>
+                </a>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
+                                            aria-describedby="namaKegiatan" placeholder="">K.ESDM audit pembangkit-pembangkit PLN oleh lembaga donor Beberapa unit
+                                                pembangkit telah dilaksanakan peremajaan mesin (Sinkronisasi K/L)</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label class="custom-checkbox mb-0">Dapat dinilai
+                                            <input type="checkbox" checked> <span class="checkmark"></span>
+
+                                        </label>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Poin</label>
+                                        <select class="form-control">
+                                            <option value="-">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Status</label>
+                                        <select class="form-control">
+                                            <option value="-">Pilih status</option>
+                                            <option value="disetujui">Disetujui</option>
+                                            <option value="klarifikasi">Dibutuhkan klarifikasi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Program Kegiatan RUEN Dalam Rencana Kerja K/L -->
+                            <div class="tab-pane fade" id="step-2" role="tabpanel">
+                                 <h5 class="mb-3">Program Kegiatan RUEN Dalam Rencana Kerja K/L</h5>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="namaKegiatan" class="float-left">RKP / Rencana BU *</label> <a class="float-right" data-toggle="modal" data-target="#inputHistory"
+                                        role="button">
+                  <small>Lihat history</small>
+                </a>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
+                                            aria-describedby="namaKegiatan" placeholder="Input kegiatan"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label class="custom-checkbox mb-0">Dapat dinilai
+                                            <input type="checkbox" checked> <span class="checkmark"></span>
+
+                                        </label>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Poin</label>
+                                        <select class="form-control">
+                                            <option value="-">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Status</label>
+                                        <select class="form-control">
+                                            <option value="-">Pilih status</option>
+                                            <option value="disetujui">Disetujui</option>
+                                            <option value="klarifikasi">Dibutuhkan klarifikasi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <label for="namaKegiatan" class="float-left">RKAKL / RKAP BU *</label> <a class="float-right" data-toggle="modal" data-target="#inputHistory"
+                                        role="button">
+                  <small>Lihat history</small>
+                </a>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
+                                            aria-describedby="namaKegiatan" placeholder="Input kegiatan"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label class="custom-checkbox mb-0">Dapat dinilai
+                                            <input type="checkbox" checked> <span class="checkmark"></span>
+
+                                        </label>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Poin</label>
+                                        <select class="form-control">
+                                            <option value="-">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Status</label>
+                                        <select class="form-control">
+                                            <option value="-">Pilih status</option>
+                                            <option value="disetujui">Disetujui</option>
+                                            <option value="klarifikasi">Dibutuhkan klarifikasi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pelaksanaan Capaian Program/Kegiatan RUEN pada K/L -->
+                            <div class="tab-pane fade" id="step-3" role="tabpanel">
+                                 <h5 class="mb-3">Pelaksanaan Capaian Program/Kegiatan RUEN pada K/L</h5>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="namaKegiatan" class="float-left">Proses Pelaksanaan Program / Kegiatan *</label> <a class="float-right"
+                                        data-toggle="modal" data-target="#inputHistory" role="button">
+                  <small>Lihat history</small>
+                </a>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
+                                            aria-describedby="namaKegiatan" placeholder="Input kegiatan"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label class="custom-checkbox mb-0">Dapat dinilai
+                                            <input type="checkbox" checked> <span class="checkmark"></span>
+
+                                        </label>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Poin</label>
+                                        <select class="form-control">
+                                            <option value="-">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Status</label>
+                                        <select class="form-control">
+                                            <option value="-">Pilih status</option>
+                                            <option value="disetujui">Disetujui</option>
+                                            <option value="klarifikasi">Dibutuhkan klarifikasi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <label for="namaKegiatan" class="float-left">Kemajuan Pelaksanaan Program / Kegiatan *</label> <a class="float-right"
+                                        data-toggle="modal" data-target="#inputHistory" role="button">
+                  <small>Lihat history</small>
+                </a>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="name" rows="4" cols="80" class="form-control" id="namaKegiatan"
+                                            aria-describedby="namaKegiatan" placeholder="Input kegiatan"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label class="custom-checkbox mb-0">Dapat dinilai
+                                            <input type="checkbox" checked> <span class="checkmark"></span>
+
+                                        </label>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Poin</label>
+                                        <select class="form-control">
+                                            <option value="-">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="">Status</label>
+                                        <select class="form-control">
+                                            <option value="-">Pilih status</option>
+                                            <option value="disetujui">Disetujui</option>
+                                            <option value="klarifikasi">Dibutuhkan klarifikasi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-12 offset-lg-3">
+                        <hr/>
+                    </div>
+                    <div class="col-lg-9 col-12 offset-lg-3 d-flex justify-content-between">
+                        <button class="btn btnPrev btn-light mr-2"><i data-feather="arrow-left" class="feather-16"></i> Sebelumnya</button>
+                        <button
+                        class="btn btnNext btn-primary">Selanjutnya</button>
+                    </div>
+                </div>
+                <footer class="mt-4 pt-4">
+                    <div class="text-left"> <small class="text-secondary">&copy; 2020 DEWAN ENERGI NASIONAL. ALL RIGHTS RESERVED.</small>
+
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- Modal history -->
+        <div class="modal fade" id="inputHistory" data-backdrop="static" data-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <h5 class="modal-title" id="staticBackdropLabel">Input history [Section name]</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <i data-feather="x-circle"></i>
+
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-borderless table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Kode</th>
+                                        <th>History</th>
+                                        <th>Tanggal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Kode</td>
+                                        <td>History description</td>
+                                        <td>Tanggal</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/all.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                 $('input.files').filer({
+                   addMore: true,
+                   showThumbs: true,
+                   extensions: ["jpg", "png", "gif", "pdf", "doc"]
+                 });
+                 $('#myWizard').TabWizard({
+                   nextButtonClass: '.btnNext',
+                   previousButtonClass: '.btnPrev',
+                   onFinish: function () {
+                     alert('Anda yakin mau simpan update kegitan ini?');
+                   }
+                 });
+              });
+              // Feather Icons
+              feather.replace();
+        </script>
+    </body>
+
+</html>
