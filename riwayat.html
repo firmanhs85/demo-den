@@ -29,7 +29,7 @@
       </a>
 
                     </li>
-                    <li class="active"> <a href="./kegiatan.html">
+                    <li> <a href="./kegiatan.html">
         <span class="nav-icon"><i data-feather="clipboard"></i></span>
         <span class="nav-title">Kegiatan</span>
       </a>
@@ -47,7 +47,7 @@
       </a>
 
                     </li>
-                    <li> <a href="./riwayat.html">
+                    <li class="active"> <a href="./riwayat.html">
         <span class="nav-icon"><i data-feather="clock"></i></span>
         <span class="nav-title">Riwayat</span>
       </a>
@@ -84,7 +84,7 @@
                         id="open-nav"> <i data-feather="menu"></i>
 
                         </button>
-                         <h3 class="d-inline-block m-0">Kegiatan</h3>
+                         <h3 class="d-inline-block m-0">Riwayat</h3>
 
                     </div>
                     <div class="user-name float-right">
@@ -98,10 +98,15 @@
                     </div>
                 </div>
                 <div class="d-flex flex-wrap justify-content-between">
-                     <h5 class="section-title mb-4">Daftar Program dan Kegiatan</h5>
+                     <h5 class="section-title mb-4">Riwayat Penilaian</h5>
 
-                    <div> <a href="#" class="btn btn-primary" onclick="openFilter()"><i data-feather="search" class="feather-16"></i></a>
+                    <div>
+                        <div> <a href="#" class="btn btn-primary mr-1" onclick="openFilter()"><i data-feather="search" class="feather-16"></i></a>
 
+                            <a
+                            href="#" class="btn btn-primary"><i data-feather="download" class="feather-16 d-inline-block mr-1"></i> Export
+                                data</a>
+                        </div>
                     </div>
                 </div>
                 <div class="row mt-4">
@@ -111,24 +116,62 @@
                                 <thead>
                                     <tr class="bg-light">
                                         <th scope="col">No.</th>
-                                        <th scope="col">Kementerian/Lembaga</th>
+                                        <th scope="col">Kode</th>
                                         <th scope="col">Bidang</th>
-                                        <th scope="col">Program</th>
+                                        <th scope="col" width="140">Program</th>
                                         <th scope="col">Kegiatan</th>
-                                        <th scope="col" width="120">Periode</th>
-                                        <th scope="col" width="180"></th>
+                                        <th scope="col" class="text-center">Periode</th>
+                                        <th scope="col" width="160">Tanggal input</th>
+                                        <th scope="col" width="100">Status</th>
+                                        <th scope="col" width="140">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Kementerian Lingkungan Hidup dan Kehutanan</td>
-                                        <td>EBT</td>
-                                        <td>Peningkatan produksi dan pemanfaatan BBN</td>
-                                        <td>Menyusun peta jalan penyiapan jenis tanaman prioritas untuk bahan baku
-                                            BBN</td>
-                                        <td>2016-2019</td>
-                                        <td class="text-right"> <a href="./kegiatan-update-wizard1.html" class="btn btn-sm btn-outline-primary"><i class="feather-12" data-feather="edit"></i> Update progress</a>
+                                        <td>1549243264</td>
+                                        <td>Ketenagalistrikan</td>
+                                        <td>Pembangunan Infrastruktur Ketenagalistrikan</td>
+                                        <td>Membangun infrastruktur ketenagalistrikan hingga penyediaan kapasitas
+                                            terpasang pembangkit listrik, mencapai</td>
+                                        <td class="text-center">6</td>
+                                        <td>2016-2050</td>
+                                        <td> <span class="status-badge status-badge--success">Disetujui</span>
+
+                                        </td>
+                                        <td>
+                                            <!-- <a href="./riwayat-detail.html" class="btn btn-outline-primary btn-sm"><i data-feather="edit" class="feather-16"></i> Edit</a> -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>1549243264</td>
+                                        <td>Ketenagalistrikan</td>
+                                        <td>Pembangunan Infrastruktur Ketenagalistrikan</td>
+                                        <td>Membangun infrastruktur ketenagalistrikan hingga penyediaan kapasitas
+                                            terpasang pembangkit listrik, mencapai</td>
+                                        <td class="text-center">6</td>
+                                        <td>2016-2050</td>
+                                        <td> <span class="status-badge status-badge--pending">Pending</span>
+
+                                        </td>
+                                        <td> <a href="./riwayat-detail.html" class="btn btn-outline-primary btn-sm"><i data-feather="check" class="feather-16"></i> Klarifikasi</a>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>1549243264</td>
+                                        <td>Ketenagalistrikan</td>
+                                        <td>Pembangunan Infrastruktur Ketenagalistrikan</td>
+                                        <td>Membangun infrastruktur ketenagalistrikan hingga penyediaan kapasitas
+                                            terpasang pembangkit listrik, mencapai</td>
+                                        <td class="text-center">6</td>
+                                        <td>2016-2050</td>
+                                        <td> <span class="status-badge status-badge--progress">Butuh klarifikasi</span>
+
+                                        </td>
+                                        <td> <a href="./riwayat-detail.html" class="btn btn-outline-primary btn-sm"><i data-feather="edit" class="feather-16"></i> Edit</a>
 
                                         </td>
                                     </tr>
@@ -170,87 +213,6 @@
                     </div>
                 </footer>
             </div>
-        </div>
-        <!-- Filter panel -->
-        <div class="panel-filter p-4 pt-5" id="filterPanel">
-            <form class="" action="./kegiatan-search.html"> <a href="#" class="close-panel" onclick="closePanel()">
-      <i data-feather="x-circle"></i>
-    </a>
-
-                 <h5 class="mt-2">Pencarian program atau kegiatan</h5>
-
-                <div class="form-group">
-                    <div class="form-group mt-4">
-                        <label for="namaKegiatan"><strong>Nama Kegiatan atau program</strong>
-                        </label>
-                        <input type="text" class="form-control" id="namaKegiatan" aria-describedby="namaKegiatan"
-                        placeholder="Cari nama kegiatan">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-group mt-4">
-                        <label for="periode"><strong>Kementerian/Departemen</strong>
-                        </label>
-                        <select class="custom-select">
-                            <option selected>Pilih kementerian</option>
-                            <option value="Nama Kementerian">Nama Kementerian/Departemen</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label><strong>Data Bidang</strong>
-                    </label>
-                    <label class="custom-checkbox">EBT
-                        <input type="checkbox"> <span class="checkmark"></span>
-
-                    </label>
-                    <label class="custom-checkbox">Ketenaga Listrikan
-                        <input type="checkbox"> <span class="checkmark"></span>
-
-                    </label>
-                    <label class="custom-checkbox">Fosil
-                        <input type="checkbox"> <span class="checkmark"></span>
-
-                    </label>
-                    <label class="custom-checkbox">Konservasi Energi dan Nilai Tambah
-                        <input type="checkbox"> <span class="checkmark"></span>
-
-                    </label>
-                    <label class="custom-checkbox">Lainnya
-                        <input type="checkbox"> <span class="checkmark"></span>
-
-                    </label>
-                </div>
-                <div class="form-group">
-                    <div class="form-group mt-4">
-                        <label for="periode"><strong>Periode</strong>
-                        </label>
-                        <select class="custom-select">
-                            <option selected>Pilih periode</option>
-                            <option value="2016-2020">2016-2020</option>
-                            <option value="2019-2020">2019-2020</option>
-                            <option value="2019-2050">2019-2050</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-group mt-4">
-                        <label for="periode"><strong>Grade</strong>
-                        </label>
-                        <select class="custom-select">
-                            <option selected>Pilih Grade</option>
-                            <option value="0-10">0-10</option>
-                            <option value="11-30">11-30</option>
-                            <option value="31-50">31-50</option>
-                            <option value="51-85">51-85</option>
-                            <option value="86-100">86-100</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="panel-btn px-4 py-3">
-                    <button type="submit" class="btn btn-primary btn-block">Cari</button>
-                </div>
-            </form>
         </div>
         <script type="text/javascript" src="js/all.js"></script>
         <script type="text/javascript">
