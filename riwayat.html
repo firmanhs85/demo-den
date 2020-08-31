@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="img/favicon.png" />
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>DEN</title>
     </head>
     
@@ -155,7 +156,7 @@
                                         <td> <span class="status-badge status-badge--pending">Pending</span>
 
                                         </td>
-                                        <td> <a href="./riwayat-detail.html" class="btn btn-outline-primary btn-sm"><i data-feather="check" class="feather-16"></i> Klarifikasi</a>
+                                        <td> <a href="./riwayat-detail.html" class="btn btn-block btn-outline-primary btn-sm"><i data-feather="check" class="feather-16"></i> Klarifikasi</a>
 
                                         </td>
                                     </tr>
@@ -171,7 +172,7 @@
                                         <td> <span class="status-badge status-badge--progress">Butuh klarifikasi</span>
 
                                         </td>
-                                        <td> <a href="./riwayat-detail.html" class="btn btn-outline-primary btn-sm"><i data-feather="edit" class="feather-16"></i> Edit</a>
+                                        <td> <a href="./riwayat-detail.html" class="btn btn-block btn-outline-primary btn-sm"><i data-feather="edit" class="feather-16"></i> Edit</a>
 
                                         </td>
                                     </tr>
@@ -228,6 +229,61 @@
                    onFinish: function () {
                      alert('Anda yakin mau simpan update kegitan ini?');
                    }
+                 });
+                 $('.rtf').richText({
+                    // text formatting
+                    bold: true,
+                    italic: true,
+                    underline: true,
+            
+                    // title
+                    heading: false,
+            
+                    // text alignment
+                    leftAlign: true,
+                    centerAlign: true,
+                    rightAlign: true,
+                    justify: true,
+            
+                    // lists
+                    ol: true,
+                    ul: true,
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
                  });
               });
               // Feather Icons
