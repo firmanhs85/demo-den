@@ -7,6 +7,8 @@
         />
         <meta name="theme-color" content="#00A697" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css"
+        rel="stylesheet" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="img/favicon.png" />
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -428,6 +430,7 @@
             </form>
         </div>
         <script type="text/javascript" src="js/all.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                  $('input.files').filer({
@@ -442,6 +445,7 @@
                      alert('Anda yakin mau simpan update kegitan ini?');
                    }
                  });
+                 $('.js-example-basic-single').select2();
                  $('.rtf1' ).richText({
             
                     // fonts

@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta name="theme-color" content="#00A697" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="img/favicon.png" />
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>DEN</title>
+    </head>
+    
+    <body>
+        <div class="overlay-nav" id="menu-overlay" onclick="closeNav()"></div>
+        <div class="overlay-panel" id="filter-overlay" onclick="closePanel()"></div>
+        <div class="dashboard-wrapper d-flex flex-wrap align-items-stretch">
+            <div class="den-sb" id="sidebar"> <span class="den-logo"></span>
+ <a href="#" class="close-sb" onclick="closeNav()">
+    <i data-feather="x-circle"></i>
+  </a>
+
+                <ul class="den-sb-nav">
+                    <li> <a href="./dashboard.html">
+        <span class="nav-icon"><i data-feather="home"></i></span>
+        <span class="nav-title">Dashboard</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./kegiatan.html">
+        <span class="nav-icon"><i data-feather="clipboard"></i></span>
+        <span class="nav-title">Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./hasil-kegiatan.html">
+        <span class="nav-icon"><i data-feather="bar-chart"></i></span>
+        <span class="nav-title">Hasil Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./verifikasi.html">
+        <span class="nav-icon"><i data-feather="check-circle"></i></span>
+        <span class="nav-title">Verifikasi</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./riwayat.html">
+        <span class="nav-icon"><i data-feather="clock"></i></span>
+        <span class="nav-title">Riwayat</span>
+      </a>
+
+                    </li>
+                    <li class="active"> <a href="./administrator.html">
+        <span class="nav-icon"><i data-feather="lock"></i></span>
+        <span class="nav-title">Administrator</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./pengaturan.html">
+        <span class="nav-icon"><i data-feather="settings"></i></span>
+        <span class="nav-title">Pengaturan</span>
+      </a>
+
+                    </li>
+                    <li class="mt-4"> <a href="./tentang-kami.html">
+        <span class="nav-title p-0">Tentang Kami</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./hub-kami.html">
+        <span class="nav-title p-0">Hubungi</span>
+      </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="p-3 p-lg-4 den-content">
+                <div class="dashboard-header d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex align-items-center">
+                        <button type="button" name="button" class="btn btn-link text-dark" onclick="openNav()"
+                        id="open-nav"> <i data-feather="menu"></i>
+
+                        </button>
+                         <h3 class="d-inline-block m-0">Administrator</h3>
+
+                    </div>
+                    <div class="user-name float-right">
+                        <div class="user-name-avatar rounded-circle shadow-sm"></div>
+                        <div class="user-name-label mr-3"> <small>Login sebagai</small>
+
+                            <br/>Nama Kementerian</div>
+                        <button type="button" class="btn btn-link" onclick="window.location.href='./index.html';"><i data-feather="log-out"></i>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="row mt-4 d-flex">
+                    <div class="col-12 col-lg-3 border-right">
+                        <ul class="nav nav-tabs vertical-tabs">
+                            <li class="nav-item"> <a class="nav-link" aria-current="page" href="./administrator.html">Referential</a>
+
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="./administrator-role.html">Role</a>
+
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="./administrator-user.html">User</a>
+
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="./administrator-menu.html">Menu</a>
+
+                            </li>
+                            <li class="nav-item"> <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Notification Template</a>
+
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="./administrator-instansi.html">Instansi</a>
+
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="./administrator-program.html">Program</a>
+
+                            </li>
+                            <li class="nav-item"> <a class="nav-link active" href="./administrator-kegiatan.html">Kegiatan</a>
+
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="./administrator-bobot.html">Bobot Penilaian</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="d-flex w-100 justify-content-between align-items-center mb-3">
+                             <h5 class="mb-0">Kegiatan</h5>
+
+                            <div> <a href="#" class="btn btn-primary btn-sm" onclick="openFilter()"><i data-feather="search" class="feather-16"></i></a>
+
+                                <a
+                                data-toggle="collapse" href="#addNew" data-target="#addNew" role="button"
+                                aria-expanded="false" aria-controls="collapseExample" class="btn btn-sm btn-primary"><i data-feather="plus" class="feather-16"></i> Buat Baru</a>
+                            </div>
+                        </div>
+                        <div class="collapse" id="addNew">
+                            <div class="card border-0 bg-light mb-4">
+                                <div class="card-body">
+                                     <h5 class="mb-4">Buat kegiatan baru</h5>
+
+                                    <form class="" action="#" method="post">
+                                        <div class="form-group">
+                                            <label for="program"><strong>Program</strong>
+                                            </label>
+                                            <select class="js-example-basic-single" name="state" style="width:100%;">
+                                                <option value="">Pilih data program</option>
+                                                <option value="37">Peningkatan nilai tambah sumber daya energi dan sumber energi sebagai
+                                                    bahan bakar serta bahan baku industri nasional</option>
+                                                <option value="38">Peningkatan eksplorasi sumber daya dan cadangan panas bumi</option>
+                                                <option
+                                                value="39">Peningkatan potensi dan kualitas data Energi Baru dan Terbarukan</option>
+                                                    <option
+                                                    value="40">Pembangunan Infrastruktur Ketenagalistrikan</option>
+                                                        <option value="41">Peningkatan produksi BBN untuk pemanfaatan di sektor transportasi, industri
+                                                            dan pembangkit listrik</option>
+                                                        <option value="42">Peningkatan nilai tambah sumber daya energi dan sumber energi sebagai
+                                                            bahan bakar serta bahan baku industri nasional</option>
+                                                        <option value="43">Peningkatan eksplorasi sumber daya dan cadangan minyak dan gas bumi (migas)</option>
+                                                        <option
+                                                        value="44">Peningkatan eksplorasi sumber daya dan cadangan batubara</option>
+                                                            <option
+                                                            value="45">Optimalisasi produksi minyak dan gas bumi (migas)</option>
+                                                                <option value="46">Peningkatan iklim investasi migas</option>
+                                                                <option value="47">Pengembangan lapangan migas tidak aktif (idle)</option>
+                                                                <option value="48">Peningkatan Inventasi dan Pengembangan Sumber Energi di Luar Negeri oleh
+                                                                    BUMN</option>
+                                                                <option value="49">Pembangunan infrastruktur migas</option>
+                                                                <option value="50">Pengurangan ekspor gas bumi</option>
+                                                                <option value="51">Pengurangan ekspor batubara</option>
+                                                                <option value="52">Pengurangan ekspor minyak mentah</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for=""><strong>Periode</strong>
+                                            </label>
+                                            <select name="txt_period" class="custom-select">
+                                                <option value="" selected="selected">Pilih Data Periode</option>
+                                                <option value="262">2016 - 2035</option>
+                                                <option value="259">2016 - 2036</option>
+                                                <option value="261">2016 - 2045</option>
+                                                <option value="260">2016 - 2046</option>
+                                                <option value="256">2016-2017</option>
+                                                <option value="251">2016-2019</option>
+                                                <option value="258">2016-2020</option>
+                                                <option value="252">2016-2025</option>
+                                                <option value="253">2016-2027</option>
+                                                <option value="250">2016-2050</option>
+                                                <option value="247">2017-2019</option>
+                                                <option value="248">2018</option>
+                                                <option value="254">2019-2025</option>
+                                                <option value="257">2019-2050</option>
+                                                <option value="249">2025 - 2050</option>
+                                                <option value="255">2025-2050</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group row mb-3">
+                                            <label class="col-12"><strong>Data Bidang</strong>
+                                            </label>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">EBT
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Ketenaga Listrikan
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Fosil
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Konservasi Energi dan Nilai Tambah
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Lainnya
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mb-3">
+                                            <label class="col-12"><strong>Kelembagaan</strong>
+                                            </label>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian Perhubungan
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Dewan Energi Nasional
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian Pertanian
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian Lingkungan Hidup dan Kehutanan
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian Energi dan Sumber Daya Mineral
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian Perindustrian
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian Keuangan
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian Perencanaan Pembangunan
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian Riset, Teknologi, dan Pendidikan Tinggi
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian BUMN
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian Pekerjaan Umum dan Perumahan Rakyat
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian Agraria dan Tata Ruang
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <label class="custom-checkbox">Kementerian Dalam Negeri
+                                                    <input type="checkbox"> <span class="checkmark"></span>
+
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="table-name"><strong>Nama Kegiatan</strong>
+                                            </label>
+                                            <textarea name="name" rows="4" cols="80" class="form-control"></textarea>
+                                        </div>
+                                        <hr>
+                                        <div class="w-100"> <a data-toggle="collapse" href="#addNew" data-target="#addNew" role="button"
+                                            aria-expanded="false" aria-controls="collapseExample" class="btn btn-secondary">Cancel</a>
+
+                                            <a
+                                            href="#" type="submit" class="btn btn-primary"><i class="feather-16" data-feather="save"></i> Submit</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-borderless table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" style="width: 1%">No</th>
+                                        <th class="text-left" style="width: 5%">Bidang</th>
+                                        <th class="text-left" style="width: 15%">Program</th>
+                                        <th class="text-left" style="width: 15%">Kegiatan</th>
+                                        <th class="text-center" style="width: 5%">Periode</th>
+                                        <th class="text-center" style="width: 10%">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td>EBT</td>
+                                        <td>Peningkatan nilai tambah sumber daya energi dan sumber energi sebagai
+                                            bahan bakar serta bahan baku industri nasional</td>
+                                        <td>Menjamin ketersediaan Crude Palm Oil (CPO) untuk memenuhi kebutuhan CPO
+                                            sebagai bahan bakar nabati (BBN) dalam negeri</td>
+                                        <td class="text-center">2016-2050</td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td>EBT</td>
+                                        <td>Peningkatan eksplorasi sumber daya dan cadangan panas bumi</td>
+                                        <td>Melakukan Pelelangan WK Panas Bumi minimal 7 WK per tahun</td>
+                                        <td class="text-center">2016-2050</td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td>EBT</td>
+                                        <td>Peningkatan eksplorasi sumber daya dan cadangan panas bumi</td>
+                                        <td>Menyiapkan rekomendasi WK Panas Bumi minimal 4 WK per tahun</td>
+                                        <td class="text-center">2016-2050</td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">4</td>
+                                        <td>EBT</td>
+                                        <td>Peningkatan potensi dan kualitas data Energi Baru dan Terbarukan</td>
+                                        <td>Meningkatkan kualitas dan kuantitas survei potensi energi air, bioenergi,
+                                            surya, angin</td>
+                                        <td class="text-center">2016-2050</td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">5</td>
+                                        <td>EBT</td>
+                                        <td>Peningkatan potensi dan kualitas data Energi Baru dan Terbarukan</td>
+                                        <td>Melakukan survei potensi arus, gelombang dan perbedaan suhu lapisan laut,
+                                            serta EBT lainnya</td>
+                                        <td class="text-center">2016-2050</td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">6</td>
+                                        <td>EBT</td>
+                                        <td>Peningkatan potensi dan kualitas data Energi Baru dan Terbarukan</td>
+                                        <td>Meningkatkan survei potensi dan cadangan uranium serta melakukan survei
+                                            potensi dan cadangan thorium</td>
+                                        <td class="text-center">2016-2050</td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">7</td>
+                                        <td>EBT</td>
+                                        <td>Peningkatan potensi dan kualitas data Energi Baru dan Terbarukan</td>
+                                        <td>Meningkatkan kerja sama internasional dalam investasi dan pengembangan
+                                            energi</td>
+                                        <td class="text-center">2016-2050</td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">8</td>
+                                        <td>EBT</td>
+                                        <td>Peningkatan produksi BBN untuk pemanfaatan di sektor transportasi, industri
+                                            dan pembangkit listrik</td>
+                                        <td>Meningkatkan produksi biodiesel sebesar 11,6 juta KL pada tahun 2025 sebagai
+                                            campuran BBM untuk pemanfaatan sektor transportasi, industri dan pembangkit
+                                            listrik</td>
+                                        <td class="text-center">2016-2025</td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">9</td>
+                                        <td>EBT</td>
+                                        <td>Peningkatan produksi BBN untuk pemanfaatan di sektor transportasi, industri
+                                            dan pembangkit listrik</td>
+                                        <td>Meningkatkan produksi bioethanol sebesar 3,4 juta KL pada tahun 2025 sebagai
+                                            campuran BBM untuk pemanfaatan sektor transportasi</td>
+                                        <td class="text-center">2016-2025</td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">10</td>
+                                        <td>EBT</td>
+                                        <td>Peningkatan produksi BBN untuk pemanfaatan di sektor transportasi, industri
+                                            dan pembangkit listrik</td>
+                                        <td>Membentuk badan usaha EBT tersendiri yang ditugasi Pemerintah untuk mengembangkan,
+                                            memanfaatkan dan/atau membeli EBT</td>
+                                        <td class="text-center">2016-2019</td>
+                                        <td align="center"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <hr>
+                            </div>
+                            <div class="col-6 d-none d-lg-block"> <span class="text-secondary">Menampilkan <strong>1-10</strong> dari <strong>189</strong> Kegiatan</span>
+
+                            </div>
+                            <div class="col-6">
+                                <nav aria-label="..." class="float-lg-right">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item active" aria-current="page"> <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="page-item"> <a class="page-link" href="#">Next</a>
+
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="mt-4 pt-4">
+                    <div class="text-left"> <small class="text-secondary">&copy; 2020 DEWAN ENERGI NASIONAL. ALL RIGHTS RESERVED.</small>
+
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- Filter panel -->
+        <div class="panel-filter p-4 pt-5" id="filterPanel">
+            <form class="" action="./kegiatan-search.html"> <a href="#" class="close-panel" onclick="closePanel()">
+      <i data-feather="x-circle"></i>
+    </a>
+
+                 <h5 class="mt-2">Pencarian program atau kegiatan</h5>
+
+                <div class="form-group">
+                    <div class="form-group mt-4">
+                        <label for="namaKegiatan"><strong>Nama Kegiatan atau program</strong>
+                        </label>
+                        <input type="text" class="form-control" id="namaKegiatan" aria-describedby="namaKegiatan"
+                        placeholder="Cari nama kegiatan">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group mt-4">
+                        <label for="periode"><strong>Kementerian/Departemen</strong>
+                        </label>
+                        <select class="custom-select">
+                            <option selected>Pilih kementerian</option>
+                            <option value="Nama Kementerian">Nama Kementerian/Departemen</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><strong>Data Bidang</strong>
+                    </label>
+                    <label class="custom-checkbox">EBT
+                        <input type="checkbox"> <span class="checkmark"></span>
+
+                    </label>
+                    <label class="custom-checkbox">Ketenaga Listrikan
+                        <input type="checkbox"> <span class="checkmark"></span>
+
+                    </label>
+                    <label class="custom-checkbox">Fosil
+                        <input type="checkbox"> <span class="checkmark"></span>
+
+                    </label>
+                    <label class="custom-checkbox">Konservasi Energi dan Nilai Tambah
+                        <input type="checkbox"> <span class="checkmark"></span>
+
+                    </label>
+                    <label class="custom-checkbox">Lainnya
+                        <input type="checkbox"> <span class="checkmark"></span>
+
+                    </label>
+                </div>
+                <div class="form-group">
+                    <div class="form-group mt-4">
+                        <label for="periode"><strong>Periode</strong>
+                        </label>
+                        <select class="custom-select">
+                            <option selected>Pilih periode</option>
+                            <option value="2016-2020">2016-2020</option>
+                            <option value="2019-2020">2019-2020</option>
+                            <option value="2019-2050">2019-2050</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group mt-4">
+                        <label for="periode"><strong>Grade</strong>
+                        </label>
+                        <select class="custom-select">
+                            <option selected>Pilih Grade</option>
+                            <option value="0-10">0-10</option>
+                            <option value="11-30">11-30</option>
+                            <option value="31-50">31-50</option>
+                            <option value="51-85">51-85</option>
+                            <option value="86-100">86-100</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="panel-btn px-4 py-3">
+                    <button type="submit" class="btn btn-primary btn-block">Cari</button>
+                </div>
+            </form>
+        </div>
+        <!-- Modal Edit -->
+        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <h5 class="modal-title" id="exampleModalLabel">Edit Kegiatan</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+
+                        </button>
+                    </div>
+                    <form class="" action="#" method="post">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="program"><strong>Program</strong>
+                                </label>
+                                <select class="js-example-basic-single" name="state" style="width:100%;">
+                                    <option value="">Pilih data program</option>
+                                    <option value="37">Peningkatan nilai tambah sumber daya energi dan sumber energi sebagai
+                                        bahan bakar serta bahan baku industri nasional</option>
+                                    <option value="38">Peningkatan eksplorasi sumber daya dan cadangan panas bumi</option>
+                                    <option
+                                    value="39">Peningkatan potensi dan kualitas data Energi Baru dan Terbarukan</option>
+                                        <option
+                                        value="40">Pembangunan Infrastruktur Ketenagalistrikan</option>
+                                            <option value="41">Peningkatan produksi BBN untuk pemanfaatan di sektor transportasi, industri
+                                                dan pembangkit listrik</option>
+                                            <option value="42">Peningkatan nilai tambah sumber daya energi dan sumber energi sebagai
+                                                bahan bakar serta bahan baku industri nasional</option>
+                                            <option value="43">Peningkatan eksplorasi sumber daya dan cadangan minyak dan gas bumi (migas)</option>
+                                            <option
+                                            value="44">Peningkatan eksplorasi sumber daya dan cadangan batubara</option>
+                                                <option
+                                                value="45">Optimalisasi produksi minyak dan gas bumi (migas)</option>
+                                                    <option value="46">Peningkatan iklim investasi migas</option>
+                                                    <option value="47">Pengembangan lapangan migas tidak aktif (idle)</option>
+                                                    <option value="48">Peningkatan Inventasi dan Pengembangan Sumber Energi di Luar Negeri oleh
+                                                        BUMN</option>
+                                                    <option value="49">Pembangunan infrastruktur migas</option>
+                                                    <option value="50">Pengurangan ekspor gas bumi</option>
+                                                    <option value="51">Pengurangan ekspor batubara</option>
+                                                    <option value="52">Pengurangan ekspor minyak mentah</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for=""><strong>Periode</strong>
+                                </label>
+                                <select name="txt_period" class="custom-select">
+                                    <option value="" selected="selected">Pilih Data Periode</option>
+                                    <option value="262">2016 - 2035</option>
+                                    <option value="259">2016 - 2036</option>
+                                    <option value="261">2016 - 2045</option>
+                                    <option value="260">2016 - 2046</option>
+                                    <option value="256">2016-2017</option>
+                                    <option value="251">2016-2019</option>
+                                    <option value="258">2016-2020</option>
+                                    <option value="252">2016-2025</option>
+                                    <option value="253">2016-2027</option>
+                                    <option value="250">2016-2050</option>
+                                    <option value="247">2017-2019</option>
+                                    <option value="248">2018</option>
+                                    <option value="254">2019-2025</option>
+                                    <option value="257">2019-2050</option>
+                                    <option value="249">2025 - 2050</option>
+                                    <option value="255">2025-2050</option>
+                                </select>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-12"><strong>Data Bidang</strong>
+                                </label>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">EBT
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Ketenaga Listrikan
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Fosil
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Konservasi Energi dan Nilai Tambah
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Lainnya
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label class="col-12"><strong>Kelembagaan</strong>
+                                </label>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian Perhubungan
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Dewan Energi Nasional
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian Pertanian
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian Lingkungan Hidup dan Kehutanan
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian Energi dan Sumber Daya Mineral
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian Perindustrian
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian Keuangan
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian Perencanaan Pembangunan
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian Riset, Teknologi, dan Pendidikan Tinggi
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian BUMN
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian Pekerjaan Umum dan Perumahan Rakyat
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian Agraria dan Tata Ruang
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label class="custom-checkbox">Kementerian Dalam Negeri
+                                        <input type="checkbox"> <span class="checkmark"></span>
+
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="table-name"><strong>Nama Kegiatan</strong>
+                                </label>
+                                <textarea name="name" rows="4" cols="80" class="form-control"></textarea>
+                            </div>
+                            <hr>
+                            <div class="w-100"> <a data-toggle="collapse" href="#addNew" data-target="#addNew" role="button"
+                                aria-expanded="false" aria-controls="collapseExample" class="btn btn-secondary">Cancel</a>
+
+                                <a
+                                href="#" type="submit" class="btn btn-primary"><i class="feather-16" data-feather="save"></i> Submit</a>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/all.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                 $('input.files').filer({
+                   addMore: true,
+                   showThumbs: true,
+                   extensions: ["jpg", "png", "gif", "pdf", "doc"]
+                 });
+                 $('#myWizard').TabWizard({
+                   nextButtonClass: '.btnNext',
+                   previousButtonClass: '.btnPrev',
+                   onFinish: function () {
+                     alert('Anda yakin mau simpan update kegitan ini?');
+                   }
+                 });
+                 $('.js-example-basic-single').select2();
+                 $('.rtf1' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+                 $('.rtf2' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+                 $('.rtf3' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+                 $('.rtf4' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+                 $('.rtf5' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+                 $('.rtf6' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+              });
+              // Feather Icons
+              feather.replace();
+        </script>
+    </body>
+
+</html>
