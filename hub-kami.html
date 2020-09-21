@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta name="theme-color" content="#00A697" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="img/favicon.png" />
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>DEN</title>
+    </head>
+    
+    <body>
+        <div class="overlay-nav" id="menu-overlay" onclick="closeNav()"></div>
+        <div class="overlay-panel" id="filter-overlay" onclick="closePanel()"></div>
+        <div class="dashboard-wrapper d-flex flex-wrap align-items-stretch">
+            <div class="den-sb" id="sidebar"> <span class="den-logo"></span>
+ <a href="#" class="close-sb" onclick="closeNav()">
+    <i data-feather="x-circle"></i>
+  </a>
+
+                <ul class="den-sb-nav">
+                    <li> <a href="./dashboard.html">
+        <span class="nav-icon"><i data-feather="home"></i></span>
+        <span class="nav-title">Dashboard</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./kegiatan.html">
+        <span class="nav-icon"><i data-feather="clipboard"></i></span>
+        <span class="nav-title">Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./hasil-kegiatan.html">
+        <span class="nav-icon"><i data-feather="bar-chart"></i></span>
+        <span class="nav-title">Hasil Kegiatan</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./verifikasi.html">
+        <span class="nav-icon"><i data-feather="check-circle"></i></span>
+        <span class="nav-title">Verifikasi</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./riwayat.html">
+        <span class="nav-icon"><i data-feather="clock"></i></span>
+        <span class="nav-title">Riwayat</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./administrator.html">
+        <span class="nav-icon"><i data-feather="lock"></i></span>
+        <span class="nav-title">Administrator</span>
+      </a>
+
+                    </li>
+                    <li> <a href="./pengaturan.html">
+        <span class="nav-icon"><i data-feather="settings"></i></span>
+        <span class="nav-title">Pengaturan</span>
+      </a>
+
+                    </li>
+                    <li class="mt-4"> <a href="./tentang-kami.html">
+        <span class="nav-title p-0">Tentang Kami</span>
+      </a>
+
+                    </li>
+                    <li class="active"> <a href="./hub-kami.html">
+        <span class="nav-title p-0">Hubungi</span>
+      </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="p-3 p-lg-4 den-content">
+                <div class="dashboard-header d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex align-items-center">
+                        <button type="button" name="button" class="btn btn-link text-dark" onclick="openNav()"
+                        id="open-nav"> <i data-feather="menu"></i>
+
+                        </button>
+                         <h3 class="d-inline-block m-0">Hubungi Kami</h3>
+
+                    </div>
+                    <div class="user-name float-right">
+                        <div class="user-name-avatar rounded-circle shadow-sm"></div>
+                        <div class="user-name-label mr-3"> <small>Login sebagai</small>
+
+                            <br/>Nama Kementerian</div>
+                        <button type="button" class="btn btn-link" onclick="window.location.href='./index.html';"><i data-feather="log-out"></i>
+
+                        </button>
+                    </div>
+                </div>
+                <!-- <div class="d-flex flex-wrap justify-content-between">
+      <h5 class="section-title mb-4">Hubungi Kami</h5>
+    </div> -->
+                <div class="row mt-4">
+                    <div class="col-12 col-lg-8 mb-4">
+                        <div class="card shadow rounded-lg border-0">
+                            <div class="card-title">
+                                <div class="map-responsive" style="overflow:hidden;">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1976.2374915785033!2d106.82869655690826!3d-6.237879553222988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3c2bb43b917%3A0xba600cb1460efcc!2sDewan%20Energi%20Nasional!5e0!3m2!1sid!2sid!4v1600714021190!5m2!1sid!2sid"
+                                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                                    aria-hidden="false" tabindex="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                 <h5>Sekretariat Jendral Dewan Energi Nasional</h5>
+
+                                <p class="w-75">Gedung Widjajono Partowidagdo/Badan Pengembangan Sumber Daya Manusia (BPSDM)
+                                    KESDM Lantai 4</p>
+                                <p>Dewan Energi Nasional Jl. Gatot Subroto No.Kav 49, Jakarta Selatan - 12950
+                                    <br/>Email: <a href="mailto:sekretariat@den.go.id">sekretariat@den.go.id</a>
+                                    <br/>Telp: 021 - 52921621
+                                    <br/>Fax: 021 - 52920190</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <section>
+                             <h5 class="mb-3">Follow Us</h5>
+
+                            <div class="mb-4 small"> <a href="#" class="display-inline-block p-1">
+              <img src="img/facebook.svg" alt="Facebook">
+            </a>
+ <a href="#" class="display-inline-block p-1">
+              <img src="img/instagram.svg" alt="Instagram">
+            </a>
+ <a href="#" class="display-inline-block p-1">
+              <img src="img/twitter.svg" alt="Twitter">
+            </a>
+ <a href="#" class="display-inline-block p-1">
+              <img src="img/youtube-play.svg" alt="Youtube">
+            </a>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <footer class="mt-4 pt-4">
+                    <div class="text-left"> <small class="text-secondary">&copy; 2020 DEWAN ENERGI NASIONAL. ALL RIGHTS RESERVED.</small>
+
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/all.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                 $('input.files').filer({
+                   addMore: true,
+                   showThumbs: true,
+                   extensions: ["jpg", "png", "gif", "pdf", "doc"]
+                 });
+                 $('#myWizard').TabWizard({
+                   nextButtonClass: '.btnNext',
+                   previousButtonClass: '.btnPrev',
+                   onFinish: function () {
+                     alert('Anda yakin mau simpan update kegitan ini?');
+                   }
+                 });
+                 $('.js-example-basic-single').select2();
+                 $('.rtf1' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+                 $('.rtf2' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+                 $('.rtf3' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+                 $('.rtf4' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+                 $('.rtf5' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+                 $('.rtf6' ).richText({
+            
+                    // fonts
+                    fonts: false,
+                    fontList: false,
+                    fontColor: false,
+                    fontSize: false,
+            
+                    // uploads
+                    imageUpload: false,
+                    fileUpload: false,
+            
+                    // media
+                    videoEmbed: false,
+            
+                    // link
+                    urls: false,
+            
+                    // tables
+                    table: false,
+            
+                    // code
+                    removeStyles: true,
+                    code: false,
+            
+                    // colors
+                    colors: [],
+            
+                    // dropdowns
+                    fileHTML: '',
+                    imageHTML: '',
+            
+                    // translations
+                    translations:false,
+                    // privacy
+                    youtubeCookies: false,
+            
+                 });
+              });
+              // Feather Icons
+              feather.replace();
+        </script>
+    </body>
+
+</html>
