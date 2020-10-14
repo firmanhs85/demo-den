@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="img/favicon.png" />
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>DEN</title>
     </head>
@@ -856,7 +857,15 @@
         <script type="text/javascript" src="js/all.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
         <script type="text/javascript">
-            $(document).ready(function() {
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+              })
+              $(function () {
+                $('[data-toggle="popover"]').popover({
+                  trigger: 'focus'
+                })
+              })
+              $(document).ready(function() {
                  $('input.files').filer({
                    addMore: true,
                    showThumbs: true,
@@ -1101,6 +1110,36 @@
               });
               // Feather Icons
               feather.replace();
+            
+              // Wizard static
+              $(document).ready(function () {
+            
+                //Wizard
+                $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+                    var $target = $(e.target);
+                    if ($target.parent().hasClass('disabled')) {
+                        return false;
+                    }
+                });
+            
+                $(".next-step").click(function (e) {
+                    var $active = $('.tab-wizard-static li>.active');
+                    $active.parent().next().find('.nav-link').removeClass('disabled');
+                    nextTab($active);
+                });
+            
+                $(".prev-step").click(function (e) {
+                    var $active = $('.tab-wizard-static li>a.active');
+                    prevTab($active);
+                });
+              });
+            
+              function nextTab(elem) {
+                  $(elem).parent().next().find('a[data-toggle="tab"]').click();
+              }
+              function prevTab(elem) {
+                  $(elem).parent().prev().find('a[data-toggle="tab"]').click();
+              }
         </script>
     </body>
 

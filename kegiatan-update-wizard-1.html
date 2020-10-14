@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="icon" href="img/favicon.png" />
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>DEN</title>
     </head>
@@ -158,7 +159,10 @@
                         <div class="tab-content" id="myTabContent">
                             <!-- Identifikasi dan Analisis Program -->
                             <div class="tab-pane fade show active" id="step-1" role="tabpanel">
-                                 <h5 class="mb-3">Identifikasi dan Analisis Program</h5>
+                                 <h5 class="mb-3">
+              Identifikasi dan Analisis Program
+              <a class="d-inline-block ml-1" tabindex="0" data-toggle="popover" data-trigger="focus" title="Title info" data-content="And here's some amazing content. It's very engaging. Right?"><i data-feather="info"></i></a>
+            </h5>
 
                                 <div class="row">
                                     <div class="col-12">
@@ -201,7 +205,10 @@
                             </div>
                             <!-- Program Kegiatan RUEN Dalam Rencana Kerja K/L -->
                             <div class="tab-pane fade" id="step-2" role="tabpanel">
-                                 <h5 class="mb-3">Program Kegiatan RUEN Dalam Rencana Kerja K/L</h5>
+                                 <h5 class="mb-3">
+              Program Kegiatan RUEN Dalam Rencana Kerja K/L
+              <a class="d-inline-block ml-1" tabindex="0" data-toggle="popover" data-trigger="focus" title="Title info" data-content="And here's some amazing content. It's very engaging. Right?"><i data-feather="info"></i></a>
+            </h5>
 
                                 <div class="row">
                                     <div class="col-12">
@@ -244,7 +251,10 @@
                             </div>
                             <!-- Pelaksanaan Capaian Program/Kegiatan RUEN pada K/L -->
                             <div class="tab-pane fade" id="step-3" role="tabpanel">
-                                 <h5 class="mb-3">Pelaksanaan Capaian Program/Kegiatan RUEN pada K/L</h5>
+                                 <h5 class="mb-3">
+              Pelaksanaan Capaian Program/Kegiatan RUEN pada K/L
+              <a class="d-inline-block ml-1" tabindex="0" data-toggle="popover" data-trigger="focus" title="Title info" data-content="And here's some amazing content. It's very engaging. Right?"><i data-feather="info"></i></a>
+            </h5>
 
                                 <div class="row">
                                     <div class="col-12">
@@ -341,7 +351,15 @@
         <script type="text/javascript" src="js/all.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
         <script type="text/javascript">
-            $(document).ready(function() {
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+              })
+              $(function () {
+                $('[data-toggle="popover"]').popover({
+                  trigger: 'focus'
+                })
+              })
+              $(document).ready(function() {
                  $('input.files').filer({
                    addMore: true,
                    showThumbs: true,
@@ -586,6 +604,36 @@
               });
               // Feather Icons
               feather.replace();
+            
+              // Wizard static
+              $(document).ready(function () {
+            
+                //Wizard
+                $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+                    var $target = $(e.target);
+                    if ($target.parent().hasClass('disabled')) {
+                        return false;
+                    }
+                });
+            
+                $(".next-step").click(function (e) {
+                    var $active = $('.tab-wizard-static li>.active');
+                    $active.parent().next().find('.nav-link').removeClass('disabled');
+                    nextTab($active);
+                });
+            
+                $(".prev-step").click(function (e) {
+                    var $active = $('.tab-wizard-static li>a.active');
+                    prevTab($active);
+                });
+              });
+            
+              function nextTab(elem) {
+                  $(elem).parent().next().find('a[data-toggle="tab"]').click();
+              }
+              function prevTab(elem) {
+                  $(elem).parent().prev().find('a[data-toggle="tab"]').click();
+              }
         </script>
     </body>
 
